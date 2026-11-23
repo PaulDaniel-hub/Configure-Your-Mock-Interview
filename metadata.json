@@ -1,0 +1,6 @@
+{
+  "name": "InterviewAce AI",
+  "description": "AI-powered mock interview platform powered by Google Gemini AI to help students and job seekers practice technical and HR interviews with structured evaluation and analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

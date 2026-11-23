@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy-950: #080D1B;
+  --color-navy-900: #0D1426;
+  --color-navy-800: #111A2E;
+  --color-navy-700: #192642;
+  --color-electric-500: #477BFF;
+  --color-electric-400: #6994FF;
+  --color-violet-500: #8857FF;
+  --color-violet-400: #A17AFF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #080D1B;
+    color: #F1F5F9;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.glass-surface {
+  background: linear-gradient(180deg, rgba(17, 26, 46, 0.88) 0%, rgba(13, 20, 38, 0.82) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.glass-surface-elevated {
+  background: linear-gradient(180deg, rgba(22, 33, 58, 0.92) 0%, rgba(15, 23, 42, 0.88) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.ambient-backdrop {
+  background-image:
+    radial-gradient(ellipse 65% 45% at 18% 0%, rgba(71, 123, 255, 0.14), transparent 70%),
+    radial-gradient(ellipse 55% 40% at 86% 8%, rgba(136, 87, 255, 0.11), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
